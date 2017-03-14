@@ -4,7 +4,7 @@ Author: Ayman Salah
 Category: Geometry
 
 Idea:
-- My approach is to minimize the lower left and the upper right corners on all rectangles.
+- My approach is to maximize the lower left and minimize the upper right corners on all rectangles.
 - If the new corners can make a valid rectangle then the answer will be the area of that rectangle.
 - Otherwise the answer is zero (there is no common area).
 */
