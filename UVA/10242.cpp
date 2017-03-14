@@ -1,6 +1,8 @@
 /*
 Author: Ayman Salah
 
+Category: Geometry
+
 Idea:
 - First of all find common point of the two adjacent sides (common_x, common_y).
 - It's obvious that the fourth point equal to (x_1 + x_2 - common_x, y_1 + y_2 - common_y).
