@@ -102,21 +102,21 @@ void update(int cur, int i, int j, int idx) {
 int main() {
 	PLAY();
 
-	int n, q, i, idx, test = 1;
+	int n, q, x, test = 1;
 	while (cin >> n) {
 		cout << "Test " << test++ << ":\n";
 		cin >> s;
 		build(1, 0, n - 1);
 		cin >> q;
 		while (q--) {
-			cin >> idx;
-			if (!idx) {
+			cin >> x;
+			if (!x) {
 				if (!tree[1].first && !tree[1].second)
 					cout << "YES" << endl;
 				else
 					cout << "NO" << endl;
 			}
-			else update(1, 0, n - 1, idx - 1);
+			else update(1, 0, n - 1, x - 1);
 		}
 	}
 
