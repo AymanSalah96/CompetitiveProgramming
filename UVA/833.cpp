@@ -84,7 +84,7 @@ struct line {
 bool can(int x, line l) {
 	return (x >= l.p1.x && x <= l.p2.x) || (x >= l.p2.x && x <= l.p1.x);
 }
-#define inRange(c, l, r) ((c >= l && c <= r) || (c >= r && c <= l))
+
 int main() {
 	PLAY();
 
