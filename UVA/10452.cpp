@@ -65,7 +65,6 @@ string dir[] = { "forth", "right", "left" };
 string path = "IEHOVA#";
 int n, m;
 char a[9][9];
-bool vis[9][9];
 bool valid(int i, int j) {return i >= 0 && i < n && j >= 0 && j < m;}
 
 
