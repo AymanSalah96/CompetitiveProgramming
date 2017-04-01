@@ -74,17 +74,17 @@ void PLAY() {
 
 
 int n, m, a[15];
-int dp[1000001][2];
+int dp[1000001];
 
-int can_win(int cur, int player) {
+int can_win(int cur) {
 	if (cur == 0) return false;
 
-	int &win = dp[cur][player];
+	int &win = dp[cur];
 	if (win != -1) return win;
 	win = 0;
 	for (int i = 0; i < m; i++)
 		if (cur - a[i] >= 0) 
-			win |= !can_win(cur - a[i], 1 - player);
+			win |= !can_win(cur - a[i]);
 
 	return win;
 }
@@ -97,7 +97,7 @@ int main() {
 		cin >> m;
 		for (int i = 0; i < m; i++)
 			cin >> a[i];
-		if (can_win(n, 0))
+		if (can_win(n))
 			cout << "Stan wins" << endl;
 		else
 			cout << "Ollie wins" << endl;
