@@ -95,9 +95,18 @@ int solve(int i, int cur) {
 
 void print(int i, int cur) {
 	if (i == sz(num)) return;
-	int ch1 = solve(i + 1, cur);
-	int ch2 = solve(i + 1, (cur == 10 ? (num[i] - '0') % 8 : (cur * 10 + (num[i] - '0')) % 8));
-	int ch = solve(i, cur);
+
+	int ch1, ch2, ch;
+	
+	ch1 = solve(i + 1, cur);
+
+	if (cur == 10)
+		ch2 = solve(i + 1, (num[i] - '0') % 8);
+	else
+		ch2 = solve(i + 1, (cur * 10 + (num[i] - '0')) % 8);
+	
+	ch = solve(i, cur);
+	
 	if (ch == ch1)
 		print(i + 1, cur);
 	else {
