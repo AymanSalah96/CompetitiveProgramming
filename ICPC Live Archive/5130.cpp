@@ -84,29 +84,43 @@ void clear() {
 bool valid(int i, int j) { return i >= 0 && i < MAXN && j >= 0 && j < MAXN; }
 
 void dfs(int i, int j) {
-	vis[i][j] = true;
-	for (int k = 0; k < 4; k++) {
-		int to_i = dx[k] + i;
-		int to_j = dy[k] + j;
-		if (valid(to_i, to_j) && !vis[to_i][to_j] && !grid[to_i][to_j])
-			dfs(to_i, to_j);
+	stack<pair<int, int>> st;
+	st.push({ i, j });
+	while (sz(st)) {
+		int x = st.top().first;
+		int y = st.top().second;
+		st.pop();
+		vis[x][y] = true;
+		for (int k = 0; k < 4; k++) {
+			int to_i = dx[k] + x;
+			int to_j = dy[k] + y;
+			if (valid(to_i, to_j) && !vis[to_i][to_j] && !grid[to_i][to_j])
+				st.push({ to_i, to_j });
+		}
 	}
 }
 
 int cnt;
 void dfs2(int i, int j) {
-	vis[i][j] = true;
-	int ret = 0;
-	for (int k = 0; k < 4; k++) {
-		int to_i = dx[k] + i;
-		int to_j = dy[k] + j;
-		if (!valid(to_i, to_j) || vis[to_i][to_j]) continue;
-		if (grid[to_i][to_j]) {
-			dfs2(to_i, to_j);
-		}
-		else {
-			cnt++;
-			dfs(to_i, to_j);
+	stack<pair<int, int>> st;
+	st.push({ i, j });
+	while (sz(st)) {
+		int x = st.top().first;
+		int y = st.top().second;
+		st.pop();
+		vis[x][y] = true;
+		int ret = 0;
+		for (int k = 0; k < 4; k++) {
+			int to_i = dx[k] + x;
+			int to_j = dy[k] + y;
+			if (!valid(to_i, to_j) || vis[to_i][to_j]) continue;
+			if (grid[to_i][to_j]) {
+				st.push({ to_i, to_j });
+			}
+			else {
+				cnt++;
+				dfs(to_i, to_j);
+			}
 		}
 	}
 }
