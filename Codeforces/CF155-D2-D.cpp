@@ -1,7 +1,7 @@
 /*
 Author: Ayman Salah
 
-Category: Number theory, Prime numbers, Seive
+Category: Number theory, Prime numbers, Sieve
 */
 
 
