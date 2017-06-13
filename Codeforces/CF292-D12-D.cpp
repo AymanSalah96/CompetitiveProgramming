@@ -1,7 +1,7 @@
 /*
 Author: Ayman Salah
 
-Category: Graphs, DSU
+Category: Graphs, Data Structures, DSU
 */
 
 #define _CRT_SECURE_NO_WARNINGS
