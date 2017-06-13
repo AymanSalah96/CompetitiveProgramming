@@ -2,6 +2,20 @@
 Author: Ayman Salah
 
 Category: Number theory, Prime numbers, Sieve
+
+Idea:
+-Generate all the prime devisors of numbers from 1 to n.
+-Then for each '+' query:
+    -If it's already active output "Already on"
+    -Otherwise check if this number is conflict with currently active numbers or not
+        -If conflict "the number you want to add share a prime devisor with the current active numbers,
+	then you are sure that they are not relativly prime", output "Conflict with " any number will make a conflict with.
+	-Otherwise mark this number as active and put all it's prime devisors in an array of vectors it's index as the prime devisor
+	and the values are the numbers itself.
+-For each '-' query:
+    -If it's already of output "Already off"
+    -Otherwise mark this number off and remove all the prime devisors of this number.
+
 */
 
 
