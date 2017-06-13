@@ -16,6 +16,8 @@ Idea:
     -If it's already of output "Already off"
     -Otherwise mark this number off and remove all the prime devisors of this number.
 
+-Time complexity: O(nloglogn + mlogn)
+
 */
 
 
