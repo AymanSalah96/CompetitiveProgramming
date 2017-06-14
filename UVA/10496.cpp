@@ -2,6 +2,10 @@
 Author: Ayman Salah
 
 Category: Brute Force
+
+Idea:
+-Just brute force on all permutations of positions and calculate the summation of distances
+-The answer will be the minimum cost of all
 */
 
 #define _CRT_SECURE_NO_WARNINGS
