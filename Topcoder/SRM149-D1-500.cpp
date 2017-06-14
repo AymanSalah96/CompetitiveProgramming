@@ -2,6 +2,13 @@
 Author: Ayman Salah
 
 Category: Dynamic Programming
+
+Idea:
+-Count all possible valid messages with DP
+-Take care of overflow. You don't need the actual number of differant valid messages.
+-Then if it's a unique message then construct it using the DP taple.
+-Else if there are more than one valid message output "AMBIGUOUS!"
+-Else if there are no valid messages at all output "IMPOSSIBLE!"
 */
 
 #include <vector>
@@ -58,7 +65,7 @@ public:
 		dic = dictionary;
 		ll cnt = solve(0);
 		if (cnt == 0) return "IMPOSSIBLE!";
-		if (cnt > 1) return	"AMBIGUOUS!";
+		if (cnt > 1) return "AMBIGUOUS!";
 		string ret = "";
 		int prev = 0;
 		for (int i = 0; i <= message.size(); i++) {
