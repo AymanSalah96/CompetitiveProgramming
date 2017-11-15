@@ -81,7 +81,7 @@ int main() {
 
 	ll lo = 0, hi = 1e14, res = 0;
 	while (lo <= hi) {
-		ll mid = (lo + hi + 1) / 2;
+		ll mid = (lo + hi) / 2;
 		ll take = 0;
 		for (int i = 0; i < n; i++)
 			take += min(v[i], mid);
