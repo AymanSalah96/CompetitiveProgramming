@@ -22,7 +22,6 @@
 #include <climits>
 #include <cctype>
 #include <bitset>
-#include<unordered_map>
 using namespace std;
 
 #define PI 3.14159265359
@@ -84,7 +83,7 @@ int main() {
 			num *= k;
 		}
 	}
-	unordered_map<ll, int> cnt;
+	map<ll, int> cnt;
 	cnt[0] = 1;
 	ll sum = 0, res = 0;
 
