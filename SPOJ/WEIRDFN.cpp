@@ -73,22 +73,18 @@ void update(ll val) {
 		qu2.push(-val);
 	int size = sz(qu1) + sz(qu2);
 	if (size % 2 == 0) {
-		while (sz(qu1) && sz(qu1) > sz(qu2)) {
+		while (sz(qu1) > sz(qu2)) {
 			qu2.push(-qu1.top());
 			qu1.pop();
 		}
-		while (sz(qu2) && sz(qu1) < sz(qu2)) {
+		while (sz(qu1) < sz(qu2)) {
 			qu1.push(-qu2.top());
 			qu2.pop();
 		}
 	}
 	else {
-		while (sz(qu2) && sz(qu1) <= sz(qu2)) {
+		while (sz(qu1) <= sz(qu2)) {
 			qu1.push(-qu2.top());
-			qu2.pop();
-		}
-		while (sz(qu1) && sz(qu1) - sz(qu2) > 1) {
-			qu2.push(-qu1.top());
 			qu2.pop();
 		}
 	}
