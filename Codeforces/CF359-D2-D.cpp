@@ -7,8 +7,9 @@ Idea:
 - Find the minimum value and keep expanding left and right 
 - until you can't find a value that is divisable by this minimum number.
 - erase these values and get the next minimum value from the remaining ones 
-- and keep doing this until there are not value left
-- maximze on the size of the numbers and do this again to get all the ranges with this max size
+- and keep doing this until there are no values left
+- maximze on the size of the numbers.
+- do this again to get all the ranges with this max size
 */
 
 #include <cstring>
