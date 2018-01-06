@@ -6,7 +6,7 @@ Category: Dynamic Programming, Probabilities
 Idea:
 - state of DP will be (cur tour idx, number of wining tours so far, total available capacity so far)
 - we will make a simple trick to make sure that the capacity in any state will be not less than zero
-- in the worst case we will need a bag of capacity 200 so we will begin out state with capacity 200 + k
+- in the worst case we will need a bag of capacity 200 so we will begin our state with capacity 200 + k
 - and to make sure I have won the tour, the base case will check if I won the least number of tours and the capacity is not less than 200
 */
 
