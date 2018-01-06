@@ -7,7 +7,7 @@ Idea:
 - type 0 query : update the current node with this value (r - l + 1) * x
 - type 1 query : add to the current node this value (r - l + 1) * x * x + 2 * (old range sum)
 - so we need to store in our tree two infos, first square range sum and the second is range sum
-- you also will need to keep track of queries time to make sure you update the last query
+- you also will need to keep track of queries time to make sure you update queries in a chronological order
 */
 
 #include <cstring>
