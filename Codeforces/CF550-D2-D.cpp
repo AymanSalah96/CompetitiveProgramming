@@ -6,7 +6,7 @@ Category: constructive algorithms, graph, bridges
 Idea:
 - we need to build two disjoint graphs each node degree equal to k except one of them have degree k - 1
 - then we connect these two nodes from each graph and that edge will be the bridge
-- also it's clear that there is no answe when k is even
+- also it's clear that there is no answer when k is even
 */
 
 #include <cstring>
