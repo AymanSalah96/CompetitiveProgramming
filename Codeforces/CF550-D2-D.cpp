@@ -1,7 +1,7 @@
 /*
 Author: Ayman Salah
 
-Category: constructive algorithms, graph, bridges
+Category: constructive algorithms, graphs, bridges
 
 Idea:
 - we need to build two disjoint graphs each node degree equal to k except one of them have degree k - 1
