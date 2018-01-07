@@ -72,7 +72,6 @@ void PLAY() {
 	cout.tie(0);
 }
 
-#define SQR(c) ((c) * (c))
 
 int main() {
 	PLAY();
