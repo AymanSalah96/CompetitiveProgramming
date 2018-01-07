@@ -5,7 +5,7 @@ Category: constructive algorithms, graphs, bridges
 
 Idea:
 - we need to build two disjoint graphs each node degree equal to k except one of them have degree k - 1
-- then we connect these two nodes from each graph and that edge will be the bridge
+- then we connect these two nodes from each graph that edge will be the bridge
 - also it's clear that there is no answer when k is even
 */
 
