@@ -1,6 +1,6 @@
 # Competitive Programming
 
-This repository contains source codes for some of the problems I solved on online judges. 
+This repository contains source codes for some problems I have solved on online judges. 
 
 * [A2OJ Profile](https://a2oj.com/profile?Username=ayman96) (Solved +900 problems on all online judges)
 * [Codeforces Profile](http://codeforces.com/profile/_AymanSalah) (Max rating: expert, 1757)
