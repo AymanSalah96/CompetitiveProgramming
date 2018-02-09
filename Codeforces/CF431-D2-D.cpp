@@ -67,9 +67,11 @@ ll nCr[70][70];
 ll get(ll x, ll k) {
 	if (k == 0) return x == 0;
 	if (x == 0) return 0;
-	ll mx = 0;
-	while (1ll << (mx + 1) <= x) mx++;
-	return nCr[mx][k] + get(x - (1ll << mx), k - 1);
+	bitset<70> st = x;
+	string s = st.to_string();
+	s = s.substr(s.find('1'), sz(s));
+	int cnt = sz(s) - 1;
+	return nCr[cnt][k] + get(x - (1ll << cnt), k - 1);
 }
 
 int main() {
