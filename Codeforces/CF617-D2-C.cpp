@@ -72,22 +72,6 @@ ll dist(P p1, P p2) {
 int n;
 P p[2], v[2005];
 
-ll solve(int idx) {
-	ll res = INT_MAX;
-	ll first = 0;
-	for (int i = 0; i < n; i++) {
-		first = max(first, dist(p[idx], v[i]));
-		ll second = 0;
-		for (int j = 0; j < n; j++) {
-			ll cur = dist(p[1 - idx], v[i]);
-			if (cur <= first) continue;
-			second = max(cur, second);
-		}
-		res = min(res, first + second);
-	}
-	return res;
-}
-
 int main() {
 	PLAY();
 
