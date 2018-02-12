@@ -61,6 +61,7 @@ void PLAY() {
 	cout.tie(0);
 }
 
+vector<int> a[200005];
 
 int main() {
 	PLAY();
@@ -71,34 +72,30 @@ int main() {
 	set<pair<int, int>> st;
 	for (int i = 0; i < n; i++) {
 		cin >> v[i];
-		st.insert({ v[i], i });
+		a[v[i]].push_back(i + 1);
 	}
-	
+
 	int sum = 0;
 	vector<int> res;
 	set<pair<int, int>>::iterator it;
 	for (int i = 0; i < n; i++) {
-		it = st.lower_bound({ sum, -1 });
-		if (it == st.end() || it->first != sum) {
+		if (sz(a[sum]) == 0) {
 			cout << "Impossible" << endl;
 			return 0;
 		}
-		res.push_back(it->second + 1);
-		st.erase(it);
+		res.push_back(a[sum].back());
+		a[sum].pop_back();
 		sum++;
-
 		int teams = 0;
 		while (sum - teams >= 0) {
-			it = st.lower_bound({ sum - teams, -1 });
-			if (it != st.end() && it->first == sum - teams) {
+			if (sz(a[sum - teams])) {
 				sum -= teams;
 				break;
 			}
 			teams += 3;
 		}
-
 	}
-	
+
 	if (sz(res) != n)
 		cout << "Impossible" << endl;
 	else {
