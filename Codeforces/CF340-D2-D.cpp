@@ -77,7 +77,7 @@ int LIS() {
 	vector<int> v(n, 0);
 	int ret = 1;
 	v[0] = arr[0];
-	for (size_t i = 1; i < n; i++) {
+	for (int i = 1; i < n; i++) {
 		if (arr[i] < v[0])
 			v[0] = arr[i];
 		else if (arr[i] > v[ret - 1])
