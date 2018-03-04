@@ -1,12 +1,3 @@
-/*
-Author: Ayman Salah
-Category: Geometry
-Idea:
-- My approach is to maximize the lower left and minimize the upper right corners on all rectangles.
-- If the new corners can make a valid rectangle then the answer will be the area of that rectangle.
-- Otherwise the answer is zero (there is no common area).
-*/
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <cstring>
 #include <map>
