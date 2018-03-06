@@ -68,7 +68,7 @@ int main() {
 		cin >> l >> r;
 		int a = get(l - 1), b = get(r - 1);
 		cout << a + b - cnt[l - 1] - cnt[r - 1] << "\n";
-		cnt[l] = a; cnt[r] = b;
+		cnt[l - 1] = a; cnt[r - 1] = b;
 		add(l, 1);
 		add(r - 1, -1);
 	}
